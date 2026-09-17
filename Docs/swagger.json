@@ -1,0 +1,76 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "API Catalogo de Maquiagem",
+        "version": "1.0.0"
+    },
+    "servers": [
+        {
+            "url": "http://localhost:3000",
+            "description": "Servidor de desenvolvimento local da API"
+        }
+    ],
+    "paths": {
+        "/produtos": {
+            "get": {
+                "tags": [
+                    "Produtos"
+                ],
+                "summary": "Lista todos os produtos de maquiagem registrados",
+                "operationId": "a9968c52d3c3607378d102555175f9e5",
+                "responses": {
+                    "200": {
+                        "description": "Requisição concluída com sucesso",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/produtos"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Erro ao listar produtos"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "produtos": {
+                "properties": {
+                    "id": {
+                        "type": "integer"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "categoria": {
+                        "type": "string"
+                    },
+                    "marca": {
+                        "type": "string"
+                    },
+                    "composicao": {
+                        "type": "string"
+                    },
+                    "validade": {
+                        "type": "string",
+                        "format": "date"
+                    },
+                    "peso": {
+                        "type": "integer"
+                    }
+                },
+                "type": "object"
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "Produtos",
+            "description": "Produtos"
+        }
+    ]
+}

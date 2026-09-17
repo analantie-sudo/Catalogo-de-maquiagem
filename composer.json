@@ -1,0 +1,32 @@
+{
+  "name": "elipse/gerenciadordetarefas",
+  "description": "API gerenciador de tarefas",
+  "type": "project",
+  "autoload": {
+    "psr-4": {
+      "Pc\\Api\\": "Tarefas/api/",
+      "Controller\\": "Controller/",
+      "Model\\": "Model/"
+    },
+    "files": [
+      "Config/configuration.php"
+    ]
+  },
+  "authors": [
+    {
+      "name": "Ana Maria",
+      "email": "ana.lantie@ba.estudante.senai.br"
+    },
+    {
+      "name": "Laura Souza",
+      "email": "laura.souza@ba.estudante.senai.br"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php": ">= 8.3",
+    "ext-mbstring": "*",
+    "vlucas/phpdotenv": "^5.6@dev",
+    "zircote/swagger-php": "^6.0@dev"
+  }
+}
